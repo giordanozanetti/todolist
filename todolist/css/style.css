@@ -1,0 +1,271 @@
+:root {
+  --fundo_escuro: #1a1a1a;
+  --fundo_medio: #2d2d2d;
+  --fundo_claro: #252525;
+  --borda: #404040;
+  --texto: #e0e0e0;
+  --texto_branco: #ffffff;
+  --azul: #4a90e2;
+  --verde: #5cb85c;
+  --vermelho: #d9534f;
+  --prioridade_alta: #ff4444;
+  --prioridade_media: #ffbb33;
+  --prioridade_baixa: #00C851;
+  --erro_fundo: #4a0000;
+  --erro_texto: #ff6b6b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--fundo_medio);
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  color: var(--texto);
+  display: flex;
+  flex-direction: column;
+}
+
+.header-principal {
+  background: var(--fundo_claro);
+  border-bottom: 2px solid var(--azul);
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.header-principal h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--texto_branco);
+  margin: 0;
+}
+
+.conteudo {
+  flex: 1;
+  padding: 20px;
+  padding-bottom: 40px;
+}
+
+.footer-principal {
+  background: var(--fundo_claro);
+  border-top: 2px solid var(--azul);
+  padding: 20px;
+  text-align: center;
+  color: var(--texto);
+  width: 100%;
+}
+
+.footer-principal p {
+  margin: 5px 0;
+  font-size: 0.95rem;
+}
+
+.footer-principal strong {
+  color: var(--azul);
+}
+
+.container-principal {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--fundo_medio);
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  padding: 30px;
+}
+
+.fieldset-form {
+  border: 1px solid var(--azul);
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 25px;
+  background: var(--fundo_claro);
+}
+
+.legend-form {
+  color: var(--azul);
+  font-weight: normal;
+  font-size: 1.1rem;
+  padding: 0 10px;
+}
+
+.label-campo {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: var(--texto);
+  font-weight: normal;
+}
+
+.input-texto,
+.input-data,
+.select-campo {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid var(--borda);
+  border-radius: 4px;
+  background-color: var(--fundo_escuro);
+  color: var(--texto);
+  font-size: 1rem;
+}
+
+.input-texto:focus,
+.input-data:focus,
+.select-campo:focus {
+  outline: none;
+  border-color: var(--azul);
+}
+
+.select-campo {
+  cursor: pointer;
+}
+
+.btn {
+  background: var(--azul);
+  color: var(--texto_branco);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn-adicionar {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  background: var(--verde);
+}
+
+.btn-limpar {
+  background: var(--vermelho);
+  color: var(--texto_branco);
+  border: none;
+  margin-bottom: 20px;
+}
+
+.btn-excluir {
+  background: var(--vermelho);
+  color: var(--texto_branco);
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+}
+
+.tabela-tarefas {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: var(--fundo_medio);
+  border: 1px solid var(--borda);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.tabela-tarefas caption {
+  font-size: 1.3rem;
+  font-weight: normal;
+  color: var(--azul);
+  padding: 15px;
+  text-align: left;
+}
+
+.tabela-tarefas thead {
+  background: var(--fundo_escuro);
+  color: var(--texto);
+  border-bottom: 2px solid var(--azul);
+}
+
+.tabela-tarefas th {
+  padding: 12px;
+  text-align: left;
+  font-weight: normal;
+  font-size: 0.95rem;
+}
+
+.tabela-tarefas tbody tr {
+  border-bottom: 1px solid var(--borda);
+}
+
+.tabela-tarefas tbody tr:last-child {
+  border-bottom: none;
+}
+
+.tabela-tarefas td {
+  padding: 12px;
+  color: var(--texto);
+}
+
+.tabela-tarefas td:last-child {
+  text-align: center;
+}
+
+.prioridade-alta {
+  color: var(--prioridade_alta);
+  font-weight: bold;
+}
+
+.prioridade-media {
+  color: var(--prioridade_media);
+  font-weight: bold;
+}
+
+.prioridade-baixa {
+  color: var(--prioridade_baixa);
+  font-weight: bold;
+}
+
+.mensagem-erro {
+  background-color: var(--erro_fundo);
+  color: var(--erro_texto);
+  padding: 12px;
+  border: 1px solid var(--vermelho);
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-weight: normal;
+}
+
+.tarefa-concluida {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+.btn-concluir {
+  background: var(--azul);
+  color: var(--texto_branco);
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+  .header-principal h1 {
+    font-size: 2rem;
+  }
+
+  .container-principal {
+    padding: 20px;
+  }
+
+  .tabela-tarefas {
+    font-size: 0.9rem;
+  }
+
+  .tabela-tarefas th, 
+  .tabela-tarefas td {
+    padding: 10px 8px;
+  }
+
+  .tabela-tarefas caption {
+    font-size: 1.2rem;
+  }
+}
